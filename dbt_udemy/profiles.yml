@@ -1,0 +1,14 @@
+dbt_udemy:
+  outputs:
+    dev:
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt') }}"
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: service-account
+      priority: interactive
+      project: solid-clone-477017-q1
+      threads: 4
+      type: bigquery
+      keyfile: C:/Users/PC/.dbt/key.json
+  target: dev
